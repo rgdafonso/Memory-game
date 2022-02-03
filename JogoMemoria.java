@@ -171,14 +171,14 @@ public class JogoMemoria extends javax.swing.JFrame {
 
     class Eventos_JogoDaMemoria implements ActionListener {
         
-        public String abobora = "imgs/abobora.png";
-        public String frank = "imgs/frank.png";
-        public String gato = "imgs/gato.png";
-        public String bruxa = "imgs/bruxa.png";
-        public String morcego = "imgs/morcego.png";
-        public String fantasma = "imgs/fantasma.png";
-        public String tucano = "imgs/tucano.jpg";
-        public String cavalo = "imgs/candy.jpg";
+        public String abobora = "/resources/abobora.png";
+        public String frank = "/resources/frank.png";
+        public String gato = "/resources/gato.png";
+        public String bruxa = "/resources/bruxa.png";
+        public String morcego = "/resources/morcego.png";
+        public String fantasma = "/resources/fantasma.png";
+        public String tucano = "/resources/tucano.jpg";
+        public String cavalo = "/resources/candy.jpg";
         
         int Cont_Acertos, Primeiro_Click, Segundo_Click;
         int Numero_Click, posi, cont, pontos_Anterior, Maior_Pontuacao_do_Jogador;
@@ -239,10 +239,9 @@ public class JogoMemoria extends javax.swing.JFrame {
             
             for (int i = 0; i < 16; ++i) {
                 String caminho = "";
-                if (event.getSource() == cartas[i]) {
-                    
+                if (event.getSource() == cartas[i]) {                    
                     if (Aleatorio[i] == 0) {
-                        caminho = abobora;
+                        caminho = abobora;                        
                         cartas[i].setIcon(new ImageIcon(getClass().getResource(caminho)));                        
                     }
                     if (Aleatorio[i] == 1) {
